@@ -532,70 +532,41 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-			<script src="https://apis.google.com/js/api.js"></script> <!-- GOOGLE API FOR CONTACT FORM  -->
 			<!-- JS FOR CONTACT FORM -->
-			<script> 
-				function authenticate() {
-				  return gapi.auth2.getAuthInstance()
-					.signIn({ scope: "https://www.googleapis.com/auth/spreadsheets" })
-					.then(function() {
-					  console.log("Sign-in successful");
-					}, function(error) {
-					  console.error("Error signing in", error);
-					});
-				}
+			<script>
+				document.getElementById('contactForm').addEventListener('submit', function(e) {
+				  e.preventDefault(); // Prevent the default form submission
 			  
-				function loadClient() {
-				  return gapi.client.load("https://sheets.googleapis.com/$discovery/rest?version=v4")
-					.then(function() {
-					  console.log("GAPI client loaded for API");
-					}, function(error) {
-					  console.error("Error loading GAPI client", error);
-					});
-				}
+				  // Get form data
+				  var name = e.target.elements['name'].value;
+				  var email = e.target.elements['email'].value;
+				  var message = e.target.elements['message'].value;
 			  
-				function appendToSheet(data) {
-				  const params = {
-					spreadsheetId: '1JBHL0g9MN9HC6-0poxAnJjkX-UAbLajUw3n3OyGxPg8', 
-					range: 'Sheet1!A2', // Where the data should go in the sheet
-					valueInputOption: 'RAW'
+				  // Create data object
+				  var data = {
+					name: name,
+					email: email,
+					message: message
 				  };
 			  
-				  const valueRangeBody = {
-					"values": [
-					  [data.name, data.email, data.message] // This corresponds to form data
-					]
-				  };
-			  
-				  return gapi.client.sheets.spreadsheets.values.append(params, valueRangeBody)
-					.then(function(response) {
-					  console.log(response.result);
-					  alert('Form submitted successfully!');
-					}, function(error) {
-					  console.error("Error appending to sheet", error);
-					});
-				}
-			  
-				// Load the Google API client and auth2 library on page load
-				gapi.load("client:auth2", function() {
-				  gapi.auth2.init({
-					client_id: "1013747169770-4bl38d1qavvuj5vgho2p408lc3adcr7i.apps.googleusercontent.com" //
-				  });
-				});
-			  
-				// Handle form submission
-				document.getElementById('contactForm').addEventListener('submit', function(event) {
-				  event.preventDefault(); // Stop form from submitting normally
-			  
-				  const formData = new FormData(event.target); // Get form data
-				  const data = {
-					name: formData.get('name'),
-					email: formData.get('email'),
-					message: formData.get('message')
-				  };
-			  
-				  authenticate().then(loadClient).then(function() {
-					appendToSheet(data);
+				  // Send data to Google Apps Script
+				  fetch('https://script.google.com/macros/s/AKfycbxBlKwfrGUHiK4e8X4NO687FEAEKRvUPgwJFnHkeXp_dGnGHT6ebOC514rjFP-5ttMwlA/exec', {
+					method: 'POST',
+					mode: 'no-cors', // 'no-cors' to prevent CORS errors
+					headers: {
+					  'Content-Type': 'application/json'
+					},
+					body: JSON.stringify(data)
+				  })
+				  .then(function() {
+					// Optionally display a success message to the user
+					alert('Message sent successfully');
+					// Clear the form
+					e.target.reset();
+				  })
+				  .catch(function(error) {
+					// Handle errors
+					console.error('Error!', error.message);
 				  });
 				});
 			  </script>
