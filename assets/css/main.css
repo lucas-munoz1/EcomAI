@@ -31,6 +31,13 @@
     position: relative;
     overflow: hidden;
 }
+	@media screen and (max-width: 980px) {
+
+		.modal-content{
+			width: 90% !important;
+		}
+
+	}
 
 /* Close Button */
 .close-modal {
