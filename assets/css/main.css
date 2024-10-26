@@ -157,6 +157,15 @@
 		margin-left: 1em;
 	}
 
+	@media screen and (max-width: 980px) {
+		.modal-image-with-text{
+			flex-direction: column;
+		}
+		.modal-image-with-text img{
+			width: 75%;
+		}
+	}
+
 /*Customer review examples in modals*/
 .cr-example-figure{
 	width: 75%;
