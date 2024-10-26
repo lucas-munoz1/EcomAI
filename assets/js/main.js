@@ -54,7 +54,45 @@
                 }
             });
         });
+		
+		// Scroll Detection for Enlarging Nav Link Text
+		const sections = document.querySelectorAll('section');
+		const navLinks = document.querySelectorAll('.vertical-menu-1 a');
+
+		function removeActiveClasses() {
+			navLinks.forEach(link => link.classList.remove('enlarged'));
+		}
+
+		function setActiveLink(link) {
+			removeActiveClasses();
+			link.classList.add('enlarged');
+		}
+
+		function checkActiveSection() {
+			sections.forEach((section) => {
+				const rect = section.getBoundingClientRect();
+				if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
+					const activeLink = document.querySelector(`.vertical-menu-1 a[href="#${section.id}"]`);
+					if (activeLink) setActiveLink(activeLink);
+				}
+			});
+    	}
+
+		// Add scroll event listener
+		$window.on('scroll', checkActiveSection);
+
+		// Initial check to highlight the correct link on page load
+		checkActiveSection();	
+		// Add scroll event listener
+
+		// Add hover event listener to each nav link
+		navLinks.forEach(link => {
+			link.addEventListener('mouseenter', () => {
+				setActiveLink(link); // Remove active classes from others and add to hovered link
+			});
+		});
     });
+
 	// Touch?
 		if (browser.mobile) {
 

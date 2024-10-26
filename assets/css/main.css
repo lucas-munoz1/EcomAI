@@ -6,6 +6,65 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
+
+/*Vertical menu ul*/
+.nav-li{
+	padding: 0em;
+}
+.vertical-menu-1 *{
+	transition:all 0.4s;
+	-webkit-transition:all 0.4s;
+  
+  }
+  .vertical-menu-1{
+	/* box-shadow: 0px 0px 5px black; */
+	list-style-type:none;
+	padding:0px;
+	display:block;
+	max-width:200px;
+	width:auto;
+	border-radius: 5px;
+	border: none;
+	margin-left: auto;
+	background-color: rgba(255, 255, 255, 0.05);
+	
+  }
+  .vertical-menu-1 li{
+	margin-right: 1em;
+	text-align:right;
+  
+  }
+  .vertical-menu-1 li a{
+	text-decoration:none;
+	border-bottom: none;
+	color:#797979;
+	background-color: none;
+	display:block;
+	/* padding:20px; */
+	left:0px;
+	padding: 0em!important;
+	border-radius: 5px;
+	text-transform: uppercase;
+	font-size: small;
+  }
+
+  .vertical-menu-1 li a:hover{
+	padding:30px;
+	color: white;
+	background-color: rgba(26, 26, 26, 0.50);
+	margin-right: -1em;
+	box-shadow:0px 0px 5px black;
+  }
+
+/*Class for items in nav bar to be applied when scrolled to associated section*/
+.vertical-menu-1 li a.enlarged {
+	padding:30px;
+	color: white!important;
+	background-color: rgba(26, 26, 26, 0.50);
+	margin-right: -1em;
+	box-shadow:0px 0px 5px black;
+}
+
 /* Modal Overlay */
 .modal {
     display: none; /* Hidden by default */
@@ -108,8 +167,18 @@
 	margin-left: 20px;
 	margin-right: 20px;
 }
+
+/*For paragraphs around list items so there isnt big gaps */
+.engine-pre-list-item{
+	margin-bottom: .75em;
+}
+/*For texts to be indented*/
 .engine-list-item{ 
 	margin-left: 2em;
+	margin-bottom: 0em;
+}
+.list-container{
+	margin-bottom: 2em;
 }
 
 /*H3 tags for expanding engine sections*/
@@ -124,6 +193,37 @@
 	.engine-header:hover{
 		color: black;
 	}
+
+/*Container for engine explanation of methods*/
+.engine-method-container{
+	display: flex;
+	flex-direction: column;
+	margin-left: 2em;
+	margin-bottom: 2em;
+}
+	.engine-method-container h3{
+		margin-bottom: 0em;
+	}
+	.engine-method-container p{
+		margin-bottom: 1em;
+	}
+
+/*Container for individual services in our services section*/
+.service-container{
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 2em;
+	margin-left: 2em;
+}
+	.service-container h3{
+		margin-bottom: 0em;
+	}
+
+/*Text with .5 em margin at bottom (SMALLEST BOTTOM MARGIN) */
+.service-pre-list{
+	margin-bottom: .5em;
+}
+
 
 /*Text within h3 tags for expanding engine sections*/
 .toggle-text {
@@ -200,6 +300,43 @@
 .footer-clickable{
 	cursor: pointer;
 }
+
+.alert{
+	font-weight: bold;
+}
+
+/*Indented list objects (no margin at all)*/
+.indented-list-container { 
+	display: flex;
+	flex-direction: column;
+	margin-left: 2em;
+	margin-bottom: 2em;
+}
+	.indented-list-container p{ 
+		margin: 0 0 0 0;
+	}
+
+/*Container for sample analysis conclusion*/
+.product-discovery-conclusion{
+	display: flex;
+	flex-direction: column;
+	margin-left: 2em;
+	margin-bottom: 2em;
+}
+	.product-discovery-conclusion h4{
+		margin-bottom: 0em;
+	}
+	.product-discovery-conclusion p{
+		margin-bottom: 1em;
+	}
+	.product-discovery-conclusion .pd-pre-list-item{ 
+		margin-bottom: .75em;
+	}
+	.product-discovery-conclusion .pd-list-item{ 
+		margin-left: 2em;
+		margin-bottom: 0em;
+	}
+
 
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
@@ -312,7 +449,7 @@ input, select, textarea {
 
 		a:hover {
 			border-bottom-color: transparent;
-			color: #49bf9d !important;
+			color: #49bf9d;
 			text-decoration: none;
 		}
 
@@ -2909,8 +3046,8 @@ input, select, textarea {
 
 		#main > section {
 			border-top: solid 2px #efefef;
-			margin: 4em 0 0 0;
-			padding: 4em 0 0 0;
+			margin: 3em 0 0 0;
+			padding: 3em 0 0 0;
 		}
 
 			#main > section:first-child {
