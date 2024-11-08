@@ -1,0 +1,78 @@
+:root, [data-bs-theme=light] {
+  --bs-primary: rgb(26, 0, 101);
+  --bs-primary-rgb: 26,0,101;
+  --bs-primary-text-emphasis: #0A0028;
+  --bs-primary-bg-subtle: #D1CCE0;
+  --bs-primary-border-subtle: #A399C1;
+}
+
+.btn-primary {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: rgb(26, 0, 101);
+  --bs-btn-border-color: rgb(26, 0, 101);
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #160056;
+  --bs-btn-hover-border-color: #150051;
+  --bs-btn-focus-shadow-rgb: 221,217,232;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #150051;
+  --bs-btn-active-border-color: #14004C;
+  --bs-btn-disabled-color: #fff;
+  --bs-btn-disabled-bg: rgb(26, 0, 101);
+  --bs-btn-disabled-border-color: rgb(26, 0, 101);
+}
+
+.btn-outline-primary {
+  --bs-btn-color: rgb(26, 0, 101);
+  --bs-btn-border-color: rgb(26, 0, 101);
+  --bs-btn-focus-shadow-rgb: 26,0,101;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: rgb(26, 0, 101);
+  --bs-btn-hover-border-color: rgb(26, 0, 101);
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: rgb(26, 0, 101);
+  --bs-btn-active-border-color: rgb(26, 0, 101);
+  --bs-btn-disabled-color: rgb(26, 0, 101);
+  --bs-btn-disabled-bg: transparent;
+  --bs-btn-disabled-border-color: rgb(26, 0, 101);
+}
+
+[data-bs-theme=dark] {
+  --bs-primary: rgba(26, 0, 101);
+  --bs-primary-rgb: 26,0,101;
+  --bs-primary-text-emphasis: #7666A3;
+  --bs-primary-bg-subtle: #050014;
+  --bs-primary-border-subtle: #10003D;
+}
+
+[data-bs-theme=dark] .btn-primary, .btn-primary[data-bs-theme=dark] {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: rgba(26, 0, 101);
+  --bs-btn-border-color: rgba(26, 0, 101);
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #160056;
+  --bs-btn-hover-border-color: #150051;
+  --bs-btn-focus-shadow-rgb: 221,217,232;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #150051;
+  --bs-btn-active-border-color: #14004C;
+  --bs-btn-disabled-color: #fff;
+  --bs-btn-disabled-bg: rgba(26, 0, 101);
+  --bs-btn-disabled-border-color: rgba(26, 0, 101);
+}
+
+[data-bs-theme=dark] .btn-outline-primary, .btn-outline-primary[data-bs-theme=dark] {
+  --bs-btn-color: rgba(26, 0, 101);
+  --bs-btn-border-color: rgba(26, 0, 101);
+  --bs-btn-focus-shadow-rgb: 26,0,101;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: rgba(26, 0, 101);
+  --bs-btn-hover-border-color: rgba(26, 0, 101);
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: rgba(26, 0, 101);
+  --bs-btn-active-border-color: rgba(26, 0, 101);
+  --bs-btn-disabled-color: rgba(26, 0, 101);
+  --bs-btn-disabled-bg: transparent;
+  --bs-btn-disabled-border-color: rgba(26, 0, 101);
+}
+
