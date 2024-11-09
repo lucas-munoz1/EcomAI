@@ -14,7 +14,6 @@
     <link rel="stylesheet" href="assets/css/bs-theme-overrides.css">
     <link rel="stylesheet" href="assets/css/Navbar-Centered-Links-icons.css">
     <link rel="stylesheet" href="assets/css/untitled.css">
-    <script src="assets/form-submission.js"></script>
 </head>
 
 <body>
@@ -205,16 +204,16 @@
             <h2 style="color: var(--bs-emphasis-color);font-family: Oswald, sans-serif;font-size: 40px;margin-bottom: 1em;">Join our Open Beta</h2>
             <p style="color: #000000;font-family: 'Roboto Condensed', sans-serif;font-size: 20px;text-align: left;margin-bottom: 2em;"><span style="color: rgb(162, 162, 162);">We are currently seeking beta testers to provide input as we develop our service. For a limited time, we are offering our services 100% free, in exchange for featuring our analysis on this website. To apply, please fill out the form below.</span></p>
             <form id="contactForm" method="post" action="#">
-                <div class="form-segment"><label class="form-label" style="font-family: 'Roboto Condensed', sans-serif;">Name:</label><input class="form-control form-input-element" type="text" placeholder="Name" id="name"></div>
-                <div class="form-segment"><label class="form-label" style="font-family: 'Roboto Condensed', sans-serif;">Contact Email:</label><input class="form-control form-input-element" type="email" placeholder="Email" id="email"></div>
-                <div class="form-segment"><label class="form-label" style="font-family: 'Roboto Condensed', sans-serif;">Business Type:</label><select class="form-select form-input-element" id="business-type">
-                        <option value="1" selected="">Retailer (Dropshipper)</option>
+                <div class="form-segment"><label class="form-label" style="font-family: 'Roboto Condensed', sans-serif;">Name:</label><input class="form-control form-input-element" type="text" placeholder="Name" id="name" name="name"></div>
+                <div class="form-segment"><label class="form-label" style="font-family: 'Roboto Condensed', sans-serif;">Contact Email:</label><input class="form-control form-input-element" type="email" placeholder="Email" id="email" name="email"></div>
+                <div class="form-segment"><label class="form-label" style="font-family: 'Roboto Condensed', sans-serif;">Business Type:</label><select class="form-select form-input-element" id="businessType" name="businessType">
+                        <option value="1" selected="selected">Retailer (Dropshipper)</option>
                         <option value="2">Wholesaler</option>
                         <option value="3">Manufacturer</option>
                         <option value="4">Pre-launch Retailer</option>
                     </select></div>
-                <div class="form-segment"><label class="form-label" style="font-family: 'Roboto Condensed', sans-serif;">Website Link:&nbsp;</label><input class="form-control" type="url" style="width: 70%;font-family: 'Roboto Condensed', sans-serif;" placeholder="https://ecomai.net/" id="website-link"></div>
-                <div style="display: flex;flex-direction: row;"><label class="form-label" style="font-family: 'Roboto Condensed', sans-serif;color: var(--bs-black);">Inquiry Description:</label><textarea class="form-control" style="width: 70%;height: 6em;font-family: 'Roboto Condensed', sans-serif;" placeholder="Tell us a bit about why you're reaching out." id="inquiry"></textarea></div>
+                <div class="form-segment"><label class="form-label" style="font-family: 'Roboto Condensed', sans-serif;">Website Link:&nbsp;</label><input class="form-control" type="url" style="width: 70%;font-family: 'Roboto Condensed', sans-serif;" placeholder="https://ecomai.net/" id="websiteLink" name="websiteLink"></div>
+                <div style="display: flex;flex-direction: row;"><label class="form-label" style="font-family: 'Roboto Condensed', sans-serif;color: var(--bs-black);">Inquiry Description:</label><textarea class="form-control" style="width: 70%;height: 6em;font-family: 'Roboto Condensed', sans-serif;" placeholder="Tell us a bit about why you're reaching out." id="inquiry" name="inquiry"></textarea></div>
                 <div style="display: flex;flex-direction: row;"><input class="btn btn-dark styled-button" type="submit" style="font-family: 'Roboto Condensed', sans-serif;"></div>
             </form>
         </div>
@@ -581,6 +580,7 @@
         </div>
     </footer>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/form-submission.js"></script>
 </body>
 
 </html>
