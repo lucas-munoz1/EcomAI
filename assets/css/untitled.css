@@ -168,6 +168,13 @@ header.masthead h1, header.masthead .h1 {
   }
 }
 
+@media (min-width: 1200px) {
+  .showcase .showcase-text {
+    padding-left: 15rem;
+    padding-right: 15rem;
+  }
+}
+
 .d-flex {
   display: flex;
 }
@@ -320,9 +327,6 @@ header.masthead h1, header.masthead .h1 {
 
 .step-card {
   margin-bottom: 1em;
-}
-
-.faq-container {
 }
 
 .faq-main-container {
