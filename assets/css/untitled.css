@@ -170,8 +170,8 @@ header.masthead h1, header.masthead .h1 {
 
 @media (min-width: 1200px) {
   .showcase .showcase-text {
-    padding-left: 15rem;
-    padding-right: 15rem;
+    padding-left: 20rem;
+    padding-right: 20rem;
   }
 }
 
@@ -577,3 +577,22 @@ td {
   font-family: Oswald, sans-serif;
 }
 
+/* For our services section */
+.services-opposite-sides{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+}
+.left-side-service-text{
+  font-family: 'Roboto Condensed', sans-serif;
+  color: rgb(0, 0, 0);
+  text-align: left;
+  font-weight: bold;
+}
+.right-side-service-text{
+  font-family: 'Roboto Condensed', sans-serif;
+  color: rgb(0, 0, 0);
+  text-align: right;
+  font-weight: bold;
+}
