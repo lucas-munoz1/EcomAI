@@ -32,17 +32,46 @@
   justify-content: space-around;
 }
 
+.card-title{
+  font-family: Oswald, sans-serif;
+  text-align: center;
+  margin-top: .5em;
+  margin-bottom: .75em;
+}
+
 .card-body {
   flex: 1 1 auto;
   padding: var(--bs-card-spacer-y) var(--bs-card-spacer-x);
   color: var(--bs-card-color);
   min-height: 7em;
+  box-shadow: 5px 5px 15px var(--bs-gray-500);
+  border-style: none;
 }
 
 .card-list-text {
   border-bottom: 1px solid lightgray;
   line-height: 2em;
+  font-size: medium;
+  text-align: justify;
 }
+@media (min-width: 576px) {
+  .card-list-text {
+    font-size: large;
+  }
+}
+
+@media (min-width: 768px) {
+  .card-list-text {
+    font-size: large;
+  }
+}
+
+@media (min-width: 992px) {
+  .card-list-text {
+    font-size: large;
+  }
+}
+
 
 .text-block {
   width: 75%;
@@ -54,11 +83,6 @@
 
 .faq-element {
   margin-left: 4em;
-}
-
-faq-icon {
-  margin-right: .5em;
-  font-size: 15px;
 }
 
 .faq-icon {
@@ -104,11 +128,38 @@ faq-icon {
   margin-right: 1em;
   width: 20%;
   text-align: left;
+  color: rgb(120, 120, 120);
+  font-size: small;
+}
+@media (min-width: 576px) {
+  .form-label {
+    font-size: medium!important;
+  }
+}
+@media (min-width: 992px) {
+  .form-label {
+    font-size: large!important;
+  }
 }
 
 .form-input-container {
   margin-left: 5em;
   width: 75%;
+}
+
+.form-text{
+  font-size: small!important;
+  color: rgb(120, 120, 120);
+}
+@media (min-width: 576px) {
+  .form-text {
+    font-size: medium!important;
+  }
+}
+@media (min-width: 992px) {
+  .form-text {
+    font-size: large!important;
+  }
 }
 
 .footer-link {
@@ -122,24 +173,24 @@ faq-icon {
 }
 
 header.masthead h1, header.masthead .h1 {
-  font-size: 2.3rem;
+  font-size: 1.5rem;
 }
 
 @media (min-width: 576px) {
   header.masthead h1, header.masthead .h1 {
-    font-size: 3rem;
+    font-size: 2rem;
   }
 }
 
 @media (min-width: 768px) {
   header.masthead h1, header.masthead .h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
 }
 
 @media (min-width: 992px) {
   header.masthead h1, header.masthead .h1 {
-    font-size: 60px;
+    font-size: 3rem;
   }
 }
 
@@ -153,6 +204,10 @@ header.masthead h1, header.masthead .h1 {
   h2 {
     font-size: 50px;
   }
+}
+
+.showcase{
+  padding: 0;
 }
 
 @media (min-width: 768px) {
@@ -266,20 +321,25 @@ header.masthead h1, header.masthead .h1 {
   padding-right: 2em;
   padding-top: 3em;
   padding-bottom: 3em;
+} 
+
+@media (min-width: 576px) {
+  .process-container {
+    padding-left: 5em;
+    padding-right: 5em;
+  }
 }
 
 @media (min-width: 992px) {
   .process-container {
-    width: 100%;
     padding: 7rem;
-    padding-left: 10em;
-    padding-right: 10em;
+    padding-left: 12em;
+    padding-right: 12em;
   }
 }
 
 @media (min-width: 1200px) {
   .process-container {
-    width: 100%;
     padding: 7rem;
     padding-left: 17em;
     padding-right: 17em;
@@ -313,8 +373,8 @@ header.masthead h1, header.masthead .h1 {
 }
 
 .testimonials {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 }
 
 .step-container {
@@ -339,11 +399,6 @@ header.masthead h1, header.masthead .h1 {
     padding-left: 10em;
     padding-right: 10em;
   }
-}
-
-.join-beta-container {
-  padding-left: 1em;
-  padding-right: 1em;
 }
 
 .form-input-element {
@@ -386,29 +441,39 @@ header.masthead h1, header.masthead .h1 {
   display: inline-block;
   color: var(--bs-primary);
   background: linear-gradient(to bottom, rgba(26, 0, 101, .55), #ffffff, rgba(26, 0, 101, .55));
-  line-height: 1.2;
+  line-height: 1;
   padding: 8px 0;
 }
 
 .header-subtitle {
+  /* background: linear-gradient(to bottom, rgba(26, 0, 101, .55), #ffffff, rgba(26, 0, 101, .55)); */
   font-size: small;
+  display: inline-block;
+  font-family: 'Roboto Condensed', sans-serif;
+  color: rgb(0, 0, 0);
+  width: 20rem;
+  margin-top: 1em; 
+  margin-bottom: 2em;
 }
 
 @media (min-width: 576px) {
   .header-subtitle {
-    font-size: 17px;
+    font-size: medium;
+    width: 28rem;
   }
 }
 
 @media (min-width: 768px) {
   .header-subtitle {
-    font-size: medium;
+    font-size: large;
+    width: 35rem;
   }
 }
 
 @media (min-width: 992px) {
   .header-subtitle {
-    font-size: 21px;
+    font-size: larger;
+    width: 45rem;
   }
 }
 
@@ -519,7 +584,7 @@ td {
 }
 
 .sample-analysis-modal h1, h2, h3, h4, h5, h6 {
-  font-family: Oswald, sans-serif;
+  font-family: 'Oswald', sans-serif;
   margin-bottom: .5em;
 }
 
@@ -575,6 +640,33 @@ td {
 .styled-button {
   background: var(--bs-primary);
   font-family: Oswald, sans-serif;
+  margin-bottom: .25em;
+  width: 7em;
+  font-size: large;
+}
+
+@media (min-width: 576px) {
+  .styled-button {
+    font-size: x-large;
+  }
+}
+
+.call-to-action-text{
+  color: var(--bs-gray-700);
+  font-style: italic;
+  font-size: x-small;
+}
+
+@media (min-width: 576px) {
+  .call-to-action-text {
+    font-size: small;
+  }
+}
+
+@media (min-width: 992px) {
+  .call-to-action-text {
+    font-size: medium;
+  }
 }
 
 /* For our services section */
@@ -595,4 +687,222 @@ td {
   color: rgb(0, 0, 0);
   text-align: right;
   font-weight: bold;
+}
+/*Section subtitles*/
+.subtitle{
+  font-size: medium;
+  color: rgb(0,0,0);
+}
+@media (min-width: 576px) {
+  .subtitle {
+    font-size: large;
+  }
+}
+@media (min-width: 768px) {
+  .subtitle {
+    font-size: larger;
+  }
+}
+@media (min-width: 992px) {
+  .subtitle {
+    font-size: x-large;
+  }
+}
+
+/*All text directly on the page rather than in a container*/
+.main-text{
+  font-size: small;
+  font-family: 'Roboto Condensed', sans-serif;
+  color: rgb(120, 120, 120);
+  text-align: left;
+}
+@media (min-width: 576px) {
+  .main-text {
+    font-size: medium;
+  }
+}
+@media (min-width: 992px) {
+  .main-text {
+    font-size: large;
+  }
+}
+
+/*Container that the table is in*/
+.services-table-container{
+  display: flex;
+  justify-content: center;
+}
+/*Table with service details in it at the bottom*/
+.services-table{
+  font-family: 'Roboto Condensed', sans-serif;
+  table-layout: fixed;
+  box-shadow: 5px 5px 15px var(--bs-gray-500);
+  padding: 0;
+}
+@media (min-width: 576px) {
+  .services-table p,li {
+    font-size: small;
+  }
+}
+@media (min-width: 768px) {
+  .services-table p,li{
+    font-size: small;
+  }
+}
+@media (min-width: 992px) {
+  .services-table p,li{
+    font-size: medium;
+  }
+}
+@media (min-width: 992px) {
+  .services-table {
+    width: 75%;
+  }
+}
+@media (min-width: 1200px) {
+  .services-table p,li {
+    font-size: large;
+  }
+}
+
+.services-table-header-cell{
+  font-family: 'Oswald', sans-serif;
+  font-size: medium;
+  background-color: #1a0065 !important;
+  color: white !important;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .services-table-header-cell {
+    font-size: x-large;
+  }
+}
+
+.services-table-grey-cell{
+  background-color: #e7e7e7 !important;
+}
+.services-table-grey-text{
+  color: rgb(0, 0, 0)!important;
+}
+.dropdown-container{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.dropdown-icon{
+  margin-left: .5em;
+  margin-bottom: 5px;
+  font-size: large;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  transform-origin: 50% 50%; 
+}
+
+.dropdown-icon.rotate {
+  transform: rotate(180deg);
+}
+
+.collapsible-section {
+  max-height: 0;
+  overflow: hidden;        /* Hide content that spills beyond max-height */
+  transition: max-height 0.3s ease-out; 
+  /* 
+    If you prefer a different type of animation, change the duration or 
+    use 'ease-in', 'linear', etc.
+  */
+}
+
+.collapsible-section.show {
+  /* 
+    Large max-height to accommodate the content. 
+    Just ensure it's bigger than the content's actual height. 
+  */
+  max-height: 100em;
+}
+
+#toggle-our-process:hover{
+  color: #343a40;
+}
+
+.small-subtitle{
+  font-size: medium;
+}
+@media (min-width: 576px) {
+  .small-subtitle {
+    font-size: larger;
+  }
+}
+@media (min-width: 992px) {
+  .small-subtitle {
+    font-size: x-large;
+  }
+}
+
+.services-list{
+  list-style: none;
+  list-style-position: outside;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.services-list li{
+  position: relative;
+  padding-left: 1.5em;
+}
+
+.services-list li:before {
+  content:"\2714\0020";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--bs-primary);
+}
+
+@media (min-width: 576px) {
+  .services-list li:before  {
+    left: 0;
+  }
+}
+
+/*For price section of services table*/
+.price-cell{
+  margin: 0;
+}
+.price-cell p{
+  margin: 0;
+}
+
+.price-cell i{
+  font-size: small;
+}
+@media (min-width: 576px) {
+  .price-cell i {
+    font-size: medium;
+  }
+}
+@media (min-width: 768px) {
+  .price-cell i {
+    font-size: large;
+  }
+}
+
+.price-text{
+  font-family: 'Oswald', sans-serif;
+  font-size: medium;
+  font-weight: 550;
+}
+@media (min-width: 576px) {
+  .price-text {
+    font-size: large;
+  }
+}
+@media (min-width: 768px) {
+  .price-text {
+    font-size: x-large;
+  }
+}
+
+/*For cells in services table */
+.services-cell-indented{
+  padding-left: 1.5em!important;
 }

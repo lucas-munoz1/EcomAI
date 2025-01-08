@@ -5,7 +5,7 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
     var name = e.target.elements['name'].value;
     var email = e.target.elements['email'].value;
     var business_type = e.target.elements['businessType'].value;
-    var website_link = e.target.elements['websiteLink'].value || '';
+    // var website_link = e.target.elements['websiteLink'].value || '';
     var inquiry = e.target.elements['inquiry'].value;
 
     // Create data object
@@ -13,12 +13,12 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
         name: name,
         email: email,
         business_type: business_type,
-        website_link: website_link,
+        // website_link: website_link,
         inquiry: inquiry
     };
     console.log(data)
     // Send data to Google Apps Script
-    fetch('https://script.google.com/macros/s/AKfycbzuAq4OtWTawmdUXFuU3zx4hxAYT0QoDF29j-Glu49pH4R6eL9NdYCinRk8y2Isuxy7Og/exec', {
+    fetch('https://script.google.com/macros/s/AKfycbxGcz0si3EN3ZFDrcQv_igBkfLVnkgonlcOlm0T4_Osi5NGcIkff2gxbR2noDpE4F6eTQ/exec', {
         method: 'POST',
         mode: 'no-cors', // 'no-cors' to prevent CORS errors
         headers: {
